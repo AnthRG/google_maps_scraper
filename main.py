@@ -237,8 +237,9 @@ def main():
             #########
             # output
             #########
-            business_list.save_to_excel(f"google_maps_data_{search_for}".replace(' ', '_'))
-            business_list.save_to_csv(f"google_maps_data_{search_for}".replace(' ', '_'))
+            business_list.save_to_excel(f"google_maps{search_for.strip()}".replace(' ', '_'))
+
+            business_list.save_to_csv(f"google_maps{search_for.strip()}".replace(' ', '_'))
 
         browser.close()
 
